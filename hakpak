@@ -11,7 +11,7 @@ echo
 echo installing SecLists...
 echo
 wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip \
-        mkdir wordlists\
+        && mkdir wordlists\
         && unzip SecList.zip \
         && rm -f SecList.zip
 echo
