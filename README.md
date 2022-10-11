@@ -5,9 +5,7 @@
 
 ## Usage
 ---
-1. Clone the git repository in main directory of the user you would like to install it under.
-
-**NOTE: DO NOT create a bin dir, this will automatically be created in the script.**
+1. Clone the git repository in your desired directory.
 
 2. Run the script by running:
 ```
