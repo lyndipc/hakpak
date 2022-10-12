@@ -1,19 +1,20 @@
 #! /bin/bash
 
-echo
-echo
-echo setting up your hakpak 💻 ☠️
-echo
-echo installing SecLists...
-echo
+echo -e "\n\nsetting up your hakpak this may take a few moments...\n\n"
+echo -e "installing git...\n"
+sudo apt-get install git
+echo -e "installing go...\n"
+sudo apt-get install golang
+echo -e "downloading wordlists...\n\n"
+# Install wordlists
 mkdir wordlists \
         && cd wordlists \
         && wget -c https://github.com/danielmiessler/SecLists/archive/master.zip -O SecList.zip \
         && unzip SecList.zip \
         && rm -f SecList.zip
-echo
-echo installing ffuf...
-echo
+# Set up ffuf, both the stable version and latest from source
+echo -e "installing ffuf...\n"
+sudo apt-get install ffuf
 go get github.com/ffuf/ffuf
-echo
-echo "NOTE: Don't forget to create an alias for ffuf!!"
+echo -e "\ncreating ffuf bash alias...\n"
+printf "alias ffufs='~/bin/go/ffuf'"
