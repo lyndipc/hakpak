@@ -1,6 +1,9 @@
 #! /bin/bash
 
 echo -e "\n\nsetting up your hakpak this may take a few moments...\n\n"
+echo -e "installing snap...\n"
+sudo apt install snapd
+export PATH=$PATH:/snap/bin
 echo -e "installing git...\n"
 sudo apt-get install git
 echo -e "installing go...\n"
@@ -18,3 +21,8 @@ sudo apt-get install ffuf
 go get github.com/ffuf/ffuf
 echo -e "\ncreating ffuf bash alias...\n"
 printf "alias ffufs='~/bin/go/ffuf'"
+# Install amass
+echo -e "installing amass...\n"
+snap install amass
+echo -e "installing nmap...\n"
+sudo apt install nmap
